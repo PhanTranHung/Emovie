@@ -1,0 +1,84 @@
+.resizeoff{
+	resize: none;
+}
+
+.margin{
+	margin: 2em -24em 2em 1em;
+}
+
+.background{
+	background-image: url('../imgs/background.jpg');
+	background-repeat: no-repeat;
+	background-blend-mode:; 
+	background-size: cover;
+	background-position: top;
+	background-attachment: fixed;
+}
+
+.form-chebox{
+	width: 100%;
+}
+
+.form-chebox div {
+	width: 50%;
+	float: left;
+}
+
+.img_size{
+	width: 10%;
+}
+
+.img_size img{
+	width: 100%;
+}
+
+.colorwhite{
+	color: white;
+}
+
+.homebutton{
+	position: fixed;
+    top: 62px;
+    left: 12px;
+    color: black;
+}
+
+.colorblack{
+	color: black;
+}
+
+.addbutton{
+	position: fixed;
+	top: 115px;
+    left: 15px;
+}
+
+.homebutton div, .addbutton div{
+	position: absolute;
+	top: 8px;
+	left: 30px;
+	visibility: hidden;
+	opacity: 0;
+ 	transition: visibility 0.5s, opacity 0.5s, background 1s, border-radius 1s, padding 0.5s, left 0.5s;
+ 	background: #ffffff00;
+	padding: 3px 0px;
+	border-radius: 0px; 
+	width: max-content;
+}
+
+.homebutton:hover div, .addbutton:hover div{
+	visibility: visible;
+	opacity: 1;
+	background: #002bff;
+	border-radius: 15px;
+	padding: 3px 10px;
+	left: 50px;
+}
+
+.index100{
+	z-index: 100;
+}
+
+.maxwidth{
+	width: 100%;
+}

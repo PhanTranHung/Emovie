@@ -1,0 +1,66 @@
+﻿CREATE SCHEMA `emovie` DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci ;
+
+use emovie;
+
+CREATE TABLE `emovie`.`admins` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `code` VARCHAR(45) NOT NULL,
+  `full_name` VARCHAR(45) NOT NULL,
+  `age` VARCHAR(45) NOT NULL,
+  `account` VARCHAR(45) NOT NULL,
+  `password` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`id`, `code`, `account`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8
+COLLATE = utf8_unicode_ci;
+
+INSERT INTO `emovie`.`admins` (`code`, `full_name`, `age`, `account`, `password`) VALUES ('zz1st', 'Phan Tran Hung', '18', 'Cuhungahihi', '123456789');
+
+
+CREATE TABLE `emovie`.`movies` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `movie_code` VARCHAR(45) NOT NULL,
+  `name` VARCHAR(45) NOT NULL,
+  `image` VARCHAR(255) NOT NULL,
+  `describe` VARCHAR(10000) NOT NULL,
+  PRIMARY KEY (`id`, `movie_code`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8
+COLLATE = utf8_unicode_ci;
+
+INSERT INTO `emovie`.`movies` (`movie_code`, `name`, `describe`, `image`) VALUES ('CH000001', 'Tôi thấy hoa vàng trên cỏ xanh', 'Phim này các cụ bảo hay lắm @@', 'Average4.jpg');
+INSERT INTO `emovie`.`movies` (`movie_code`, `name`, `describe`, `image`) VALUES ('CH000002', 'Average4', 'Chưa ra', 'Batman.jpg');
+INSERT INTO `emovie`.`movies` (`movie_code`, `name`, `describe`, `image`) VALUES ('CH000003', 'Batman', 'Từ một cậu bé với nỗi sợ hãi ám ảnh và mối thù cha mẹ bị giết, Bruce trở thành người dơi với khả năng phi thường. Nhưng anh đã phân định rõ ràng giữa cái tốt và cái xấu, cái thiện và cái ác để ra tay hành hiệp, trở thành huyền thoại về một người dơi...', 'Tthvtcx.jpg');
+
+
+CREATE TABLE `emovie`.`categorys` (
+  `code` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(45) NOT NULL,
+  `alias` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`code`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8
+COLLATE = utf8_unicode_ci;
+
+
+INSERT INTO `emovie`.`categorys` (`name`) VALUES ('Action');
+INSERT INTO `emovie`.`categorys` (`name`) VALUES ('Science Fiction');
+INSERT INTO `emovie`.`categorys` (`name`) VALUES ('Animation');
+INSERT INTO `emovie`.`categorys` (`name`) VALUES ('Horror');
+INSERT INTO `emovie`.`categorys` (`name`) VALUES ('Sports');
+INSERT INTO `emovie`.`categorys` (`name`) VALUES ('Anime');
+INSERT INTO `emovie`.`categorys` (`name`) VALUES ('Documentary');
+INSERT INTO `emovie`.`categorys` (`name`) VALUES ('Adventure');
+INSERT INTO `emovie`.`categorys` (`name`) VALUES ('Romance');
+INSERT INTO `emovie`.`categorys` (`name`) VALUES ('Family');
+
+
+CREATE TABLE `emovie`.`movie_categorys` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `movie_code` VARCHAR(100) NOT NULL,
+  `category_code` VARCHAR(100) NOT NULL,
+  PRIMARY KEY (`id`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8
+COLLATE = utf8_unicode_ci;
+

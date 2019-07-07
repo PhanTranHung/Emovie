@@ -1,0 +1,67 @@
+.input-group-custom{
+	width: 9.5rem;
+	float: right;
+	clear: both;
+	transition: all 1s cubic-bezier(1, 0.03, 0.55, 0.95);
+	padding: 1.25rem 1.5rem;
+}
+
+.input-group-custom:focus-within{
+	width: 17rem;
+}
+
+.input-group-custom:focus-within .input-group{
+	background-color: #aebbff4a !important;
+	border-radius: 20px;
+}
+
+.input-group{
+	transition: all 1s cubic-bezier(1, 0.03, 0.55, 0.95);
+}
+
+.input-custom{
+	border-radius: unset;
+	border: none;
+	border-bottom: 1px solid white;
+	background-color: #ffffff00 !important;
+	box-shadow: none !important;
+	transition: all 1s cubic-bezier(1, 0.03, 0.55, 0.95);
+}
+
+.max-content{
+	width: max-content;
+}
+
+.input-group-text-custom{
+	background-color: #ffffff00;
+    border: none;
+    border-bottom: solid 1px white;
+    border-radius: unset;
+}
+
+.button-eff{
+	border: none;
+	background-color: #ffffff00;
+	box-shadow: none;
+	cursor: pointer;
+}
+
+.input-custom::placeholder{
+	color: #bceef3;
+}
+
+.color-black{
+	color: black;
+}
+
+.color-white{
+	color: white;
+}
+
+.bg-black{
+	background-color: #161616;
+}
+
+.text-center{
+	text-align: center;
+}
